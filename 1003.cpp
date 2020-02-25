@@ -13,6 +13,10 @@ AAPATAA   	AAPAATAAAA  AAPAAATAAAAAA
  APAT A    	 APAAT A A 	 APAAAT A A A
 */
 
+//1、一定，一定，一定要弄清楚题意
+//2、一般题目给的输入输出会存在一定规律帮助理解题意 
+//3、善于发现总结规律 
+
 int main(){
 	int num;
 	vector<string> str;
@@ -45,29 +49,29 @@ int main(){
 			}
 		}
 		//	cout << "p:" << pid << "t:" << tid << endl; 
-			if(flag){
-				int count = tid - pid - 1;
-				char pattern[100] = {0};
-				char tail[100] = {0};
-				char realtail[100] = {0};
-				for(int j = 0;j < pid;j++){
-					pattern[j] = (*it)[j];
-				}
-				for(int k = 0;k < count;k++){
-					strcat(tail,pattern);
-				}
-				int id = 0;
-				for(int k = tid+1;k < size;k++){
-					realtail[id] = (*it)[k];
-					id++;
-				}
-			//	cout << "|" << realtail << " " << tail << "|" << endl;
-				if(!strcmp(tail,realtail)){
-					res.push_back("YES");
-				}else{
-					res.push_back("NO");
-				}
+		if(flag){
+			int count = tid - pid - 1;
+			char pattern[100] = {0};
+			char tail[100] = {0};
+			char realtail[100] = {0};
+			for(int j = 0;j < pid;j++){
+				pattern[j] = (*it)[j];
 			}
+			for(int k = 0;k < count;k++){
+				strcat(tail,pattern);
+			}
+			int id = 0;
+			for(int k = tid+1;k < size;k++){
+				realtail[id] = (*it)[k];
+				id++;
+			}
+			//	cout << "|" << realtail << " " << tail << "|" << endl;
+			if(!strcmp(tail,realtail)){
+				res.push_back("YES");
+			}else{
+				res.push_back("NO");
+			}
+		}
 	}
 	
 	for(it = res.begin();it != res.end();it++){
