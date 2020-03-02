@@ -1,5 +1,29 @@
 #include <iostream>
+#include <string>
+#include <string.h>
+#include <stdlib.h>
 using namespace std;
+
+/*
+char* unescape(char * str){
+	char* _re = (char *)calloc(strlen(str) + 1, 1);
+	strcpy(_re, str);
+	return _re;
+}
+
+int main()
+{
+	char *str = "hello,ÄãºÃ";
+	char *a = unescape(str);
+	string b = a;
+	if(a){
+		cout << "free" << endl;
+		free(a);
+	}
+	cout << b << endl;
+}
+*/
+
 int main()
 {
     int n;
@@ -22,4 +46,5 @@ int main()
     cout << count << endl;
     return 0;
 }
+
 

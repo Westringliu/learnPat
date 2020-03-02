@@ -21,8 +21,8 @@ int cmp(Student &stu1,Student &stu2){
 
 int main(){
 	int num;
-	vector<Student> stus;
 	cin >> num;
+	vector<Student> stus;
 	for(int i = 0;i < num;i++){
 		Student stu;
 		cin >> stu.name >> stu.id >> stu.score;
