@@ -45,19 +45,25 @@ int main(){
 		stus.push_back(stu);
 	}
 	vector<Student>::iterator it;
+	int sum = 0;
 	for(it = stus.begin();it != stus.end();++it){
 		//cout << it->no << it->de << it->cai << endl;
 		if(it->de >= H && it->cai >= H){
-			if(it->de >= L && it->cai >= L)
-				res1.push_back(*it);
-		}else if(it->de>= H && it->cai < H){
-			if(it->de >= L && it->cai >= L)
-				res2.push_back(*it);
-		}else if(it->de < H && it->cai < H && it->de> it->cai){
-			if(it->de >= L && it->cai >= L)
-				res3.push_back(*it);
-		}else if(it->de >= L && it->cai >= L){
+			res1.push_back(*it);
+			sum++;
+		}
+		else if(it->de>= H && it->cai < H && it->cai >= L){
+			res2.push_back(*it);
+			sum++;
+		}
+		//德分不低于才分，注意是不低于，这里卡了很久，还是条件没有看仔细 
+		else if(it->de < H && it->cai < H && it->de >= it->cai && it->cai >= L){
+			res3.push_back(*it);
+			sum++;
+		}
+		else if(it->de >= L && it->cai >= L){
 			res4.push_back(*it);
+			sum++;
 		}
 	}
 	//cout << "================" << endl;
@@ -69,7 +75,7 @@ int main(){
 		sort(res3.begin(),res3.end(),cmp);
 	if(!res4.empty())
 		sort(res4.begin(),res4.end(),cmp);
-	cout << res1.size() + res2.size() + res3.size() + res4.size() << endl;
+	cout << sum << endl;
 	for(it = res1.begin();it != res1.end();++it){
 		cout << it->no << " " << it->de << " " << it->cai << endl;
 	}
