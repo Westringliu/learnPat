@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include <vector>
+
 using namespace std;
 
 /*
@@ -11,14 +12,9 @@ using namespace std;
 int main(){
 	string str1,str2,str3,str4;
 	int fst = 0;
-	vector<string> week;
-	week.push_back("MON");			
-	week.push_back("TUE");
-	week.push_back("WED");
-	week.push_back("THU");
-	week.push_back("FRI");
-	week.push_back("SAT");
-	week.push_back("SUN");
+	string arr[] = {"MON","TUE","WED","THU","FRI","SAT","SUN"};
+	vector<string> week(arr,arr+7);
+
 	string res1;
 	int res2,res3;
 	cin >> str1 >> str2 >> str3 >> str4;
