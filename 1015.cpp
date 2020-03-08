@@ -30,14 +30,7 @@ int main(){
 	vector<Student> res3;
 	vector<Student> res4;
 	cin >> cnt >> L >> H;
-	if(L < 60)
-	{
-		L = 60;
-	}
-	if(H > 100)
-	{
-		H = 100;
-	}
+
 	getchar();
 	for(int i = 0;i < cnt;++i){
 		Student stu;
@@ -52,14 +45,20 @@ int main(){
 			res1.push_back(*it);
 			sum++;
 		}
-		else if(it->de>= H && it->cai < H && it->cai >= L){
-			res2.push_back(*it);
-			sum++;
+		else if(it->de>= H && it->cai < H){
+			if(it->cai >= L)
+			{
+				res2.push_back(*it);
+				sum++;
+			}
 		}
 		//德分不低于才分，注意是不低于，这里卡了很久，还是条件没有看仔细 
-		else if(it->de < H && it->cai < H && it->de >= it->cai && it->cai >= L){
-			res3.push_back(*it);
-			sum++;
+		else if(it->de < H && it->cai < H && it->de >= it->cai){
+			if(it->cai >= L)
+			{
+				res3.push_back(*it);
+				sum++;
+			}
 		}
 		else if(it->de >= L && it->cai >= L){
 			res4.push_back(*it);
@@ -67,13 +66,13 @@ int main(){
 		}
 	}
 	//cout << "================" << endl;
-	if(!res1.empty())
+	//if(!res1.empty())
 		sort(res1.begin(),res1.end(),cmp);
-	if(!res2.empty())
+	//if(!res2.empty())
 		sort(res2.begin(),res2.end(),cmp);
-	if(!res3.empty())
+	//if(!res3.empty())
 		sort(res3.begin(),res3.end(),cmp);
-	if(!res4.empty())
+//	if(!res4.empty())
 		sort(res4.begin(),res4.end(),cmp);
 	cout << sum << endl;
 	for(it = res1.begin();it != res1.end();++it){

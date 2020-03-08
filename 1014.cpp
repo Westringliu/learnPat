@@ -14,6 +14,8 @@ int main(){
 	int fst = 0;
 	string arr[] = {"MON","TUE","WED","THU","FRI","SAT","SUN"};
 	vector<string> week(arr,arr+7);
+	//该方式初始化vector需要C++11以后 
+	//vector<string> week{"MON","TUE","WED","THU","FRI","SAT","SUN"};
 
 	string res1;
 	int res2,res3;
