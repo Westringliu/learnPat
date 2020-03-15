@@ -22,7 +22,7 @@ int main(){
 	double prices[1000] = {0};
 	double res_price = 0;
 	cin >> kinds >> demands;
-	getchar();
+	getchar();	//注意末尾换行的捕获，有时容易忘记 
 	for(int i = 0;i < kinds;i++){
 		cin >> weights[i];
 	}
