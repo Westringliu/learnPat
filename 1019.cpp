@@ -14,7 +14,7 @@ int main(){
 		nums[2] = (tmp % 100) / 10;
 		nums[3] = tmp % 10;
 		if(nums[0] == nums[1] && nums[0] == nums[2] && nums[0] == nums[3]){
-			//×¢Òâ"0000",ÌØÊâÇé¿öÏÂµÄ¸ñÊ½»¯Êä³öÒ»¿ªÊ¼Íü¼Ç¿¼ÂÇ£¬Ğ¡¿¨Ò»»á 
+			//æ³¨æ„"0000",ç‰¹æ®Šæƒ…å†µä¸‹çš„æ ¼å¼åŒ–è¾“å‡ºä¸€å¼€å§‹å¿˜è®°è€ƒè™‘ï¼Œå°å¡ä¸€ä¼š 
 			cout << setw(4) << setfill('0') << tmp << " - " << setw(4) << setfill('0') << tmp << " = " << "0000" << endl;
 			return 0;
 		}
@@ -25,10 +25,10 @@ int main(){
 		int add1 = nums[0] + nums[1] * 10 + nums[2] * 100 + nums[3] * 1000;
 		int add2 = nums[0] * 1000 + nums[1] * 100 + nums[2] * 10 + nums[3];
 		tmp = add1 - add2;	
-		//ÕâÀï×Ü½áÒ»ÏÂ³£ÓÃµÄcout¸ñÊ½»¯Êä³ö£¬Ê×ÏÈÒª°üº¬Í·ÎÄ¼ş<iomanip> 
-		//1.¹Ì¶¨¿í¶ÈÊä³ö setw(int)
-		//2.¿ÕÈ±Î»²¹Áã
-		//3.Ğ¡Êı¾«¶È	setiosflag(ios::fixed)  setprecision(int)
+		//è¿™é‡Œæ€»ç»“ä¸€ä¸‹å¸¸ç”¨çš„coutæ ¼å¼åŒ–è¾“å‡ºï¼Œé¦–å…ˆè¦åŒ…å«å¤´æ–‡ä»¶<iomanip> 
+		//1.å›ºå®šå®½åº¦è¾“å‡º setw(int)
+		//2.ç©ºç¼ºä½è¡¥é›¶
+		//3.å°æ•°ç²¾åº¦	setiosflag(ios::fixed)  setprecision(int)
 		// 
 		cout << setw(4) << setfill('0') << add1 << " - " << setw(4) << setfill('0') << add2 << " = " << setw(4) << setfill('0') << tmp << endl;
 	}while(tmp != 6174);

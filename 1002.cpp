@@ -19,7 +19,7 @@ string pinyin[] = {
 
 int main()
 {
-	char num[100] = {0};	//Ê¹ÓÃlong longÒÀÈ»²»ÄÜÂú×ãÒªÇó 
+	char num[100] = {0};	//ä½¿ç”¨long longä¾ç„¶ä¸èƒ½æ»¡è¶³è¦æ±‚ 
 	int sum = 0; 
 	cin >> num;
 	for(int i = 0;i < strlen(num);i++)
@@ -37,12 +37,12 @@ int main()
 		if(0 == sum){
 			break;
 		}else{
-			sumStr.push_back(pinyin[sum % 10]);	//×¢ÒâÓĞĞ©IDEÃ»ÓĞ×Ô¶¯²¹È«£¬stlµÄ·½·¨Æ´Ğ´ĞèÒª¼Ç×¡ 
+			sumStr.push_back(pinyin[sum % 10]);	//æ³¨æ„æœ‰äº›IDEæ²¡æœ‰è‡ªåŠ¨è¡¥å…¨ï¼Œstlçš„æ–¹æ³•æ‹¼å†™éœ€è¦è®°ä½ 
 		//	cout << pinyin[sum % 10] << endl;
 			sum /= 10;
 		}
 	}
-	vector<string>::reverse_iterator it;	//ÄæÏòµü´úÆ÷ 
+	vector<string>::reverse_iterator it;	//é€†å‘è¿­ä»£å™¨ 
 	for(it = sumStr.rbegin();it != sumStr.rend() - 1;++it){
 		cout << (*it) << " ";
 	}

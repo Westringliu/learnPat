@@ -13,7 +13,7 @@ char* unescape(char * str){
 
 int main()
 {
-	char *str = "hello,ÄãºÃ";
+	char *str = "hello,ä½ å¥½";
 	char *a = unescape(str);
 	string b = a;
 	if(a){

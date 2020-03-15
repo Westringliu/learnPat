@@ -18,11 +18,11 @@ int comp(Cake& a,Cake& b){
 int main(){
 	vector<Cake> cakes;
 	double kinds,demands;
-	double weights[1000] = {0};	//×¢ÒâÊäÈëÊı¾İÓĞ¿ÉÄÜÒ²ÊÇdoubleÀàĞÍ£¬¸É´àintÈ«²¿ÓÃdouble´úÌæ£¬ÕâÒ»µã¿¨ÁËºÜ¾Ã 
+	double weights[1000] = {0};	//æ³¨æ„è¾“å…¥æ•°æ®æœ‰å¯èƒ½ä¹Ÿæ˜¯doubleç±»å‹ï¼Œå¹²è„†intå…¨éƒ¨ç”¨doubleä»£æ›¿ï¼Œè¿™ä¸€ç‚¹å¡äº†å¾ˆä¹… 
 	double prices[1000] = {0};
 	double res_price = 0;
 	cin >> kinds >> demands;
-	getchar();	//×¢ÒâÄ©Î²»»ĞĞµÄ²¶»ñ£¬ÓĞÊ±ÈİÒ×Íü¼Ç 
+	getchar();	//æ³¨æ„æœ«å°¾æ¢è¡Œçš„æ•è·ï¼Œæœ‰æ—¶å®¹æ˜“å¿˜è®° 
 	for(int i = 0;i < kinds;i++){
 		cin >> weights[i];
 	}

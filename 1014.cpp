@@ -5,8 +5,8 @@
 using namespace std;
 
 /*
-	×¢Òâ°ÑÃ¿¸öÏŞ¶¨Ìõ¼ş¶¼¿´Çå³ş£¬Àí½âÍ¸
-	×¢ÒâÊä³öÏ¸½Ú£¬±ÈÈç04£¬4Òª²¹0 
+	æ³¨æ„æŠŠæ¯ä¸ªé™å®šæ¡ä»¶éƒ½çœ‹æ¸…æ¥šï¼Œç†è§£é€
+	æ³¨æ„è¾“å‡ºç»†èŠ‚ï¼Œæ¯”å¦‚04ï¼Œ4è¦è¡¥0 
 */ 
 
 int main(){
@@ -14,7 +14,7 @@ int main(){
 	int fst = 0;
 	string arr[] = {"MON","TUE","WED","THU","FRI","SAT","SUN"};
 	vector<string> week(arr,arr+7);
-	//¸Ã·½Ê½³õÊ¼»¯vectorĞèÒªC++11ÒÔºó 
+	//è¯¥æ–¹å¼åˆå§‹åŒ–vectoréœ€è¦C++11ä»¥å 
 	//vector<string> week{"MON","TUE","WED","THU","FRI","SAT","SUN"};
 
 	string res1;
@@ -22,7 +22,7 @@ int main(){
 	cin >> str1 >> str2 >> str3 >> str4;
 
 	for(int i = 0;i < str1.size() && i < str2.size();++i){
-		//Ò»ÖÜÊÇA-G²»ÊÇA-Z£¬ÕâÀï¿¨ÁËºÜ¾Ã 
+		//ä¸€å‘¨æ˜¯A-Gä¸æ˜¯A-Zï¼Œè¿™é‡Œå¡äº†å¾ˆä¹… 
 		if(str1[i] == str2[i] && (str1[i] >= 'A' && str1[i] <= 'G') && !fst){
 			if(str1[i]>='A' && str1[i] <='Z'){
 				res1 = week[str1[i] - 'A'];

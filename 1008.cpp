@@ -10,7 +10,7 @@ int main(){
 	int id = 0;
 	char c;
 	cin >> cnt >> mv;
-	getchar();	//注意有换行符一定要用getchar处理！！！！ 
+	getchar();	//娉ㄦ剰鏈夋崲琛岀涓�瀹氳鐢╣etchar澶勭悊锛侊紒锛侊紒 
 	for(int i = 0;i < cnt;i++){
 		cin >> vec[id];
 		id++;

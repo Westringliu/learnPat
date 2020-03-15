@@ -4,7 +4,7 @@
 #include <vector>
 
 /*
-排序算法尽量使用stl提供的，提高解题效率 
+鎺掑簭绠楁硶灏介噺浣跨敤stl鎻愪緵鐨勶紝鎻愰珮瑙ｉ鏁堢巼 
 */ 
 
 using namespace std;
@@ -31,7 +31,7 @@ int main(){
 	//for(vector<Student>::iterator it = stus.begin();it != stus.end();++it){
 	//	cout << (*it).name << (*it).id << endl;
 	//}
-	sort(stus.begin(),stus.end(),cmp);	//vector本身没有sort，故使用全局提供的sort方法 
+	sort(stus.begin(),stus.end(),cmp);	//vector鏈韩娌℃湁sort锛屾晠浣跨敤鍏ㄥ眬鎻愪緵鐨剆ort鏂规硶 
 	cout << stus.begin()->name << " " << stus.begin()->id << endl;
 	cout << (stus.end()-1)->name << " " << (stus.end()-1)->id << endl;
 	return 0;
